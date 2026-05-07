@@ -36,7 +36,7 @@ export function ModelViewerModal({ product, onClose }: ModelViewerModalProps) {
         <div className="h-[72vh] w-full bg-slate-900">
           {modelUrl ? (
             <Canvas camera={{ position: [0, 1.5, 4], fov: 40 }}>
-              <Stage environment="city" intensity={0.9} contactShadow={false}>
+              <Stage environment="city" intensity={0.9}>
                 <Model url={modelUrl} />
               </Stage>
               <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />

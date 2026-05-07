@@ -90,7 +90,7 @@ export function UploadPortal({ onProductCreated }: UploadPortalProps) {
 
       if (assetInsert.error) throw assetInsert.error;
 
-      onProductCreated({ ...product, seller_id: sellerId, asset: assetInsert.data[0] });
+      onProductCreated({ ...product, seller_id: sellerId, asset: assetInsert.data?.[0] });
       setName("");
       setCategory("");
       setFrontFile(null);

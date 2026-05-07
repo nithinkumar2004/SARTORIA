@@ -25,9 +25,9 @@ export default function HomePage() {
     fetchSession();
 
     const { data: listener } = supabase.auth.onAuthStateChange((_event, sessionData) => {
-      setSession(!!sessionData?.session);
-      if (sessionData?.session) loadProducts();
-      if (!sessionData?.session) setProducts([]);
+      setSession(!!sessionData);
+      if (sessionData) loadProducts();
+      if (!sessionData) setProducts([]);
     });
 
     return () => {
