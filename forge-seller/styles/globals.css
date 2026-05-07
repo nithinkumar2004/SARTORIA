@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: radial-gradient(circle at top, rgba(124, 58, 237, 0.18), transparent 35%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+}
+
+body {
+  @apply bg-saturn-900 text-slate-100 antialiased;
+}
+
+button,
+input,
+textarea {
+  @apply rounded-md border border-slate-700 bg-slate-950 text-slate-100;
+}
+
+button:hover {
+  @apply bg-slate-800;
+}
